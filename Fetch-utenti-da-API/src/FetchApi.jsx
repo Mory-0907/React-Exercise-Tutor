@@ -5,7 +5,8 @@ export function FetchApi() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((data) => setNames(data));
+      .then((data) => setNames(data))
+      .catch((error) => console.error(`Errore nel fetch:`, error));
   }, []);
   return (
     <ul>
