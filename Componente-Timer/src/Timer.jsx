@@ -18,7 +18,7 @@ export function Timer() {
   useEffect(() => {
     if (active) {
       intervalRef.current = setInterval(() => {
-        setSeconds((prev) => prev + 1);
+        setSeconds((t) => t + 1);
       }, 1000);
     }
     return () => clearInterval(intervalRef.current);
