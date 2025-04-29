@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem("rubrica"))
+    JSON.parse(localStorage.getItem("rubrica")) || []
   );
   useEffect(() => {
     localStorage.setItem("rubrica", JSON.stringify(contacts));
